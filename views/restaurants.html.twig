@@ -1,0 +1,6 @@
+{% include 'header.html.twig' %}
+  <h3>Here are all restaurants listed</h3>
+  {% for restaurant in restaurants %}
+    <li><a href="/restaurant/{{ restaurant.id }}">{{ restaurant.name }}</a></li>
+  {% endfor %}
+{% include 'footer.html.twig' %}

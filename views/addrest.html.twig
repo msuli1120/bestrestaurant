@@ -1,0 +1,15 @@
+{% include 'header.html.twig' %}
+
+<form action="/addrest" method="post">
+  <label for="rest">Add A Restaurant in {{ cuisine.getName }} cuisine:</label>
+  <input id="rest" name="rest" type="text" class="form-control">
+  <input id="cuisine_id" name="cuisine_id" type="hidden" value="{{ cuisine.getId() }}">
+
+  <button type="submit" class="btn bg-primary">Add</button>
+</form>
+
+<form action="/cuisinerest/{{ cuisine.getId }}" method="get">
+  <button type="submit">Check {{ cuisine.getName }} restaurants</button>
+</form>
+
+{% include 'footer.html.twig' %}

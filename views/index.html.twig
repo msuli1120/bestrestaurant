@@ -1,0 +1,18 @@
+{% include 'header.html.twig' %}
+
+    <form action="/addcuisine" method="post">
+      <label for="cuisine">Add Cuisine:</label>
+      <input id="cuisine" name="cuisine" type="text" class="form-control">
+      <button type="submit" class="btn bg-primary">Add</button>
+    </form>
+
+    <form action="/cuisines" method="post">
+      <button type="submit">Check/Add by Cuisine</button>
+    </form>
+
+    <form action="/byname" method="get">
+      <button type="submit">Check All by Names</button>
+    </form>
+
+
+{% include 'footer.html.twig' %}

@@ -1,0 +1,23 @@
+{% include 'header.html.twig' %}
+  <h3>{{ restaurant.getName }}</h3>
+  <h4>Review</h4>
+
+
+
+  <form action="/addreview" method="post">
+    <input type="hidden" name="restid" value="{{ restaurant.getId }}">
+    <input id="review" name="review" type="text" class="form-control">
+    <button type="submit" class="btn bg-warning">Add Review</button>
+  </form>
+
+
+  <form action="/" method="get">
+    <button type="submit" class="btn bg-primary">Home</button>
+  </form>
+
+  <form action="/seereviews/{{ restaurant.getId }}" method="get">
+    <input type="hidden" name="restid" value="{{ restaurant.getId }}">
+    <button type="submit">Check all reviews</button>
+  </form>
+
+{% include 'footer.html.twig' %}

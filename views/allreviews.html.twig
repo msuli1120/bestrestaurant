@@ -1,0 +1,15 @@
+{% include 'header.html.twig' %}
+
+  <h3>Reviews for {{ restaurant.getName }}</h3>
+
+  {% for review in reviews %}
+    <li>{{ review.getReview }}</li>
+    <button><a href="/review/{{ review.getId }}/edit">Edit</a></button>
+    <br>
+    <br>
+  {% endfor %}
+
+  <form method="get" action="/">
+    <button type="submit">Home</button>
+  </form>
+{% include 'footer.html.twig' %}

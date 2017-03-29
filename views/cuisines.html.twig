@@ -1,0 +1,9 @@
+{% include 'header.html.twig' %}
+
+  {% if results is not empty %}
+    {% for result in results %}
+      <li><a href="/cuisine/{{ result.id }}">{{ result.name }}</a></li>
+    {% endfor %}
+  {% endif %}
+
+{% include 'footer.html.twig' %}

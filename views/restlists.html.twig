@@ -1,0 +1,10 @@
+{% include 'header.html.twig' %}
+  <h3>all {{ cuisine.name }} restaurants</h3>
+  {% for restaurant in restaurants %}
+    <li><a href="/restaurant/{{ restaurant.id }}">{{ restaurant.name }}</a></li>
+  {% endfor %}
+
+  <form action="/" method="get">
+    <button type="submit">Home</button>
+  </form>
+{% include 'footer.html.twig' %}
